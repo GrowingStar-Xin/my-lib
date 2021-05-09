@@ -1,0 +1,100 @@
+<!-- 推荐书籍样式模板 -->
+<template name="book_Item">
+  <block wx:for="{{books_list}}">
+    <navigator src="{{item.nav_src}}" class="nav" hover-class="none">
+      <view class="book_wrapper">
+        <image class="book_img" src="{{item.img_src}}" />
+        <view>
+          <text class="book_title">{{item.book_name}}</text>
+          <!-- 待填充 -->
+        </view>
+      </view>
+    </navigator>
+  </block>
+</template>
+<!-- 顶部菜单模板 -->
+<template name="menulist">
+ 
+</template>
+
+<!-- 书籍选中购物栏 -->
+<!-- <template name="selected_cart">
+  <view class="selectcart_wrapper">
+    <image src="/images/selected.png" />
+    <text class=cart_text active">已选中书籍 {{num}} 本</text>
+  </view>
+</template> -->
+
+<!-- 书籍选中列表的内容 -->
+<template name="selected_content">
+  <view id="selected_content">
+    <view class="selected_head">
+      <text>已选书籍</text>
+      <!-- 对选中列表的操作行为 -->
+      <view class="operation">
+        <view class="collect">收藏</view>
+        <view class="clear">清空</view>
+      </view>
+    </view>
+    <scroll-view scroll-y>
+      <view class="content_list">
+        <view class="item_content" wx:for="{{recommend_books_list}}">
+          <image class="item_img" src="{{item.img_src}}" />
+          <text class="item_title">{{item.book_name}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>
+<!-- 书籍未选中购物栏 -->
+<template name="unselect_cart">
+  <view class="selectcart_wrapper">
+    <image src="/images/unselected .png" />
+    <text class=cart_text">未选中书籍</text>
+    <text class="book_title">{{book_name}}</text>
+    <view>dadvada</view>
+  </view>
+</template>
+<!-- 搜索框 -->
+<template name="search">
+  <view class="search_content">
+    <input type="text" placeholder="命运的救赎" class="search_input" bindinput="_getTarget" bindblur="_stopSearch"/>
+    <button class="search_btn" hover-class="none" style="width:200rpx">搜索</button>
+  </view>
+  <view class="search_list" style="display:{{show_flag}}">
+  <block wx:for="{{searchRes}}" wx:key="id">
+    <view class="search_item" data-id="{{index}}" bindtap="_go">{{item.bookName}}</view>
+  </block>
+    <view class="search_res">一共有{{res_num}}条搜索结果</view>
+  </view>
+</template>
+
+<!-- 收藏页的模板 -->
+<template name="collect_book_Item">
+  <block wx:for="{{books_list}}" wx:key="id">
+    <view class="nav" bindtap="book_selected" id="{{index}}">
+      <view class="book_wrapper">
+        <image class="book_img" src="{{item.imgSrc}}" />
+        <view>
+          <text class="book_title">{{item.bookName}}</text>
+          <!-- 待填充 -->
+        </view>
+      </view>
+      <view class="img_1" style="display:{{img_display[index]=='none' ? 'block':'none'}}">
+        <image src="/images/icon/unselect.png" />
+      </view>
+      <view class="img_2" style="display:{{img_display[index]}}">
+        <image src="/images/icon/selected.png" />
+      </view>
+    </view>
+  </block>
+  <!-- 推荐书籍页 -->
+  <template name="mylib">
+    <!-- 轮播图 -->
+    <swiper autoplay duration="1000" interval="3000" class="index-swiper" circular="true">
+      <swiper-item wx:for="{{swiper_img_list}}" wx:key="id">
+          <image src="{{item.src}}"></image>
+      </swiper-item>
+    </swiper>
+  </template>
+</template>

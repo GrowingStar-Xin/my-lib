@@ -1,0 +1,43 @@
+<!-- 个人详情页面样式模板 -->
+<view class="wrapper" bindtap="changeInfo">
+  <view class="user_detail_head info_item">
+    <text>头像</text>
+    <view class="img_content">
+      <image src="/images/user_img/mm.jpg" />
+    </view>
+  </view>
+    <view class="info_item">
+      <text>昵称</text>
+      <view class="info_content" >
+        <text>{{user.pername}}</text>
+        <image src="/images/user_img/ranchor_grey.png" data-key="pername"/>
+      </view>
+    </view>
+    <view class="info_item">
+      <text>名字</text>
+      <view class="info_content">
+        <text>{{user.name}}</text>
+      </view>
+    </view>
+    <view class="info_item">
+      <text>性别</text>
+      <view class="info_content">
+        <text>{{user.sex=='m'?'男':'女'}}</text>
+        <image src="/images/user_img/ranchor_grey.png" data-key="sex"/>
+      </view>
+    </view>
+    <view class="info_item"  >
+      <text>学号</text>
+      <view class="info_content">
+        <text>{{user.sno}}</text>
+        
+      </view>
+    </view>
+    <view class="info_item" >
+      <text>出生</text>
+      <view class="info_content">
+        <text>{{user.borth}}</text>
+        <image src="/images/user_img/ranchor_grey.png" data-key="borth"/>
+      </view>
+    </view>
+</view>

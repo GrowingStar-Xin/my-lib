@@ -1,0 +1,53 @@
+<!-- 顶部菜单 -->
+<scroll-view scroll-x class="menu_scroll">
+  <view class="menu_wrapper">
+    <block wx:for="{{top_menu_list}}" wx:key="id">
+      <view class="menu_item" data-id="{{index}}" bindtap="filter">{{item}}</view>
+    </block>
+  </view>
+</scroll-view>
+<!-- 推荐书籍 hegiht:83%   单独赋予元素高度的时候不要加上引号-->
+<scroll-view scroll-y class="middle_scroll" style="height:{{mheight - 209}}rpx">
+  <block wx:for="{{filter_list}}" wx:key="id">
+    <!-- <navigator src="{{item.nav_src}}" class="nav" hover-class="none"> -->
+    <view id="{{item._id}}" class="book_wrapper" bindtap="collected">
+      <image class="book_img" src="{{item.imgSrc}}" />
+      <view>
+        <text class="book_title">{{item.bookName}}</text>
+        <!-- 待填充 -->
+      </view>
+      <image class="yes_no" src="{{filter_list[index].collected_flag ? '/images/yes.png':'/images/no.png'}}" />
+    </view>
+    <!-- </navigator> -->
+  </block>
+</scroll-view>
+<view class="cover" style="display:{{show_content_flag?'block':'none'}}"></view>
+
+
+<!-- 当选中推荐的书籍的时候底部菜单栏的变化 -->
+<view class="bottom">
+  <!-- 当有书籍选中后的选中列表 -->
+  <view id="selected_content" style="height:{{show_content_flag?'600rpx':'0rpx'}}">
+    <view class="selected_head">
+      <text>已选书籍</text>
+      <!-- 对选中列表的操作行为 -->
+      <view class="operation">
+        <view class="collect" bindtap="addCollectArr">收藏</view>
+        <view class="clear" bindtap="clearArr">清空</view>
+      </view>
+    </view>
+    <!-- bindtouchmove="drawmove" bindtouchend="drawend" -->
+    <!-- 引用组件书籍列表 -->
+    <view class="book_list">
+      <book_list collectArr="{{collectArr}}" edition="one" binddelEvent="del_item"></book_list>
+    </view>
+
+  </view>
+  <!-- 书籍收藏夹 /images/selected.png-->
+  <view class="selectcart_wrapper" bindtap="show_selectedContent">
+    <!-- 当有书籍被点击收藏的时候的文本与图片的切换 -->
+    <image src="{{books_num==0?'/images/unselected .png':'/images/selected.png'}}" />
+    <view class=cart_text" style="color:{{books_num==0?'#ddd':'#1296db'}}">已选中书籍<text
+        style="color:{{books_num==0?'#ddd':'red'}}">{{books_num}}</text>本</view>
+  </view>
+</view>

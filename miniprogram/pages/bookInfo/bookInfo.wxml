@@ -1,0 +1,51 @@
+<view class="bookName">
+  <text>{{book.bookName}}</text>
+  
+  <view class="book_menu">
+    <view class="readOnline" bindtap="readOnline">在线阅读</view>
+    <view class="menu_item" bindtap="onAdd">
+      <image src="{{isSelect ? '../../images/add_ok.png' : '../../images/add_no.png'}}" class="iconImg"></image>
+    </view>
+
+  </view>
+</view>
+<view class="content">
+  <image src="{{book.imgSrc}}"></image>
+  <view class="info">
+    <view>
+      <label for="bookName">书名：</label>
+      <text>{{book.bookName}}</text>
+    </view>
+    <view>
+      <label for="writer">作者：</label>
+      <text>{{book.writer}}</text>
+    </view>
+    <view>
+      <label for="browse">浏览：</label>
+      <text>{{book.browse}}</text>
+    </view>
+    <view>
+      <label for="tag">标签: </label>
+      <text>{{book.tag}}</text>
+    </view>
+    <view>
+      <label for="time">时间: </label>
+      <text>{{book.time}}</text>
+    </view>
+    <view>
+      <label for="location">书架: </label>
+      <text>{{book.location}}</text>
+    </view>
+  </view>
+</view>
+<view class="intro">
+  <view class="title">内容简介</view>
+  <view class="intro_info">
+    {{book.intro_info}}
+  </view>
+  <view class="title">作者简介</view>
+  <view class="intro_info">
+    <text>{{book.writer}}</text>
+    <view>{{book.writerInfo}}</view>
+  </view>
+</view>

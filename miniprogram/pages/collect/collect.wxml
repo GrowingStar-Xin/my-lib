@@ -1,0 +1,22 @@
+<!-- 我的收藏页面 -->
+<!-- 引入外部文件 -->
+<import src="/pages/template/template.wxml" />
+<!-- 菜单栏 -->
+<view class="record_menu_opration">
+  <text bindtap="operation">{{operation_text}}</text>
+</view>
+<!-- record的目录 -->
+<view class="record_wrapper">
+  <template is="collect_book_Item" data="{{books_list, img_display, event_flag}}"></template>
+</view>
+<!-- 点击编辑界面后的弹窗 -->
+<view class="operation_menu" style="height:{{event_flag == true?'130rpx':'0rpx'}}">
+  <button class="operation_menu_item" bindtap="all_select">
+    <image src="{{all_flag == false ? '/images/icon/all.png':'/images/icon/zero.png'}}" />
+    <text>{{all_flag == false?'全选':'取消全选'}}</text>
+  </button>
+  <button class="operation_menu_item" hover-class="{{number==0?'none':'true'}}" style="color:{{number==0?'#ddd':'#000'}}" bindtap="cancel_collect">
+    <image src="../../images/icon/trans_no.png"/>
+    <text>取消收藏</text>
+  </button>
+</view>

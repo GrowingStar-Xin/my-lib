@@ -1,0 +1,17 @@
+.changeItem{
+  border: 1rpx solid #1296db;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding:0 10rpx;
+  width: 90%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 1rpx 1rpx 10rpx #1296db;
+}
+.changeItem .changeVal {
+  padding-left: 10rpx;
+}
+.submit {
+  margin-top: 80rpx;
+}

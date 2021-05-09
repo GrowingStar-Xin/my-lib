@@ -1,0 +1,30 @@
+
+<view class="wrapper">
+  <view class="menu_list {{listHeight ? 'active' : ''}}">
+    <view class="menu_item" bindtap="_collect">
+      <image src="../../images/icon/collect_yes.png" class="itemImg"></image>
+    </view>
+    <view class="menu_item" bindtap="_subscribe">
+      <image src="../../images/icon/sub_ok.png" class="itemImg"></image>
+    </view>
+    <view class="menu_item" bindtap="_clear">
+      <image src="../../images/icon/trans_yes.png" class="itemImg"></image>
+    </view>
+  </view>
+  <view class="menu_btn" bindtap="_show" style="animation: {{run}}  1s backwards">
+    <image src="../../images/icon/book.png" class="bookImg"></image>
+  </view>
+</view>
+
+<view class="selectedList {{show_flag ? 'active' : ''}}">
+  <block wx:for="{{selected_book}}" wx:key="id">
+    <view class="item_content" data-id="{{index}}" bindtap="_select">
+      <view class="item" >
+        <image class="item_img" src="{{item.imgSrc}}" />
+        <text class="item_name">{{item.bookName}}</text>
+      </view>
+      <image src="../../images/foot.png" class="cover" style="display:{{selected_flag[index] ?'block':'none'}}"></image>
+    </view>
+
+  </block>
+</view>

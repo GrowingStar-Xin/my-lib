@@ -1,0 +1,40 @@
+<!-- 书籍列表模板 -->
+<block wx:if="{{edition=='one'}}">
+  
+  <view class="content_list" scroll-y>
+    <!-- 
+        难点：左滑删除操作！！！！ 够顶！！！ 
+        将button设置未绝对定位 通过 bindtouchStart bindtouchmove bindtouchend三个监听事件来控制是否弹出删除按钮      
+      -->
+    <block wx:for="{{collectArr}}" wx:key="id">
+      <view class="item_content" id="{{item.id}}" data-index="{{index}}" bindtouchstart="_drawstart"
+        bindtouchmove="_drawmove" bindtouchend="_drawend" style="right:{{item.right}}rpx">
+        <!-- class="item_img"  class="item_title"-->
+        <view class="item">
+          <image class="book_img" src="{{item.imgSrc}}" />
+          <text class="book_name">{{item.bookName}}</text>
+        </view>
+        <!-- 当有数据变动的操作的时候，向父组件传递信息 -->
+        <view class="del_btn" bindtap="sendData" id="{{item._id}}">删除</view>
+      </view>
+    </block>
+  </view>
+</block>
+<block wx:else>
+  <view class="content_list" scroll-y>
+    <block wx:for="{{collectArr}}" wx:key="id">
+      <view class="item" data-id="{{index}}">
+        <image class="book_img" src="{{item.imgSrc}}" />
+        <text class="book_name">{{item.bookName}}</text>
+        <!-- 当所放置的页面是展示页面的时候，则不需要删除按钮 -->
+        <view>{{del_flag}}</view>
+        <block wx:if="{{del_flag == 'true'}}">
+          <!-- 当有数据变动的操作的时候，向父组件传递信息 -->
+          <view class="del">
+            <image src="../../images/del.png" class="del_img" bindtap="sendData" data-id="{{index}}" />
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+</block>

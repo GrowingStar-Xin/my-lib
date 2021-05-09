@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bookInfo/bookInfo",
+    "pages/user/borrowInfo/borrowInfo",
+    "pages/user/user-detail/user-detail",
+    "pages/pdfReader/pdfReadder",
+    "pages/user/user",
+    "pages/user/myReserve/myReserve",
+    "pages/user/register/register",
+    "pages/test/test",
+    "pages/recommend/recommend",
+    "pages/collect/collect",
+    "pages/user/history-record/history-record",
+    "components/book_list/book_list",
+    "pages/user/changeInfo/changeInfo"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "莞工图书馆",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#ddd",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home_1.png",
+        "selectedIconPath": "/images/home_2.png"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "书籍",
+        "iconPath": "/images/recommend_1.png",
+        "selectedIconPath": "/images/recommend_2.png"
+      },
+      {
+        "pagePath": "pages/collect/collect",
+        "text": "书架",
+        "iconPath": "/images/book_self_1.png",
+        "selectedIconPath": "/images/book_self_2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/person_center_1.png",
+        "selectedIconPath": "/images/person_center_2.png"
+      }
+    ]
+  }
+}

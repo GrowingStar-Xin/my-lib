@@ -1,0 +1,138 @@
+/* 推荐图书列表的样式 */
+.middle_scroll{
+  flex: 0 0 80%;
+  width: 100%;
+}
+.book_wrapper{
+  position: relative;
+  flex: 0rpx 0rpx auto;
+  align-items: center;
+  width: 90%;
+  margin: 20rpx auto;
+  display: flex;
+  background: transparent;
+  border-radius: 15rpx;
+  box-shadow: 1rpx 1rpx 10rpx #1296db,
+              1rpx 1rpx 20rpx #1296db;
+}
+.book_img{
+  width: 170rpx;
+  height: 210rpx;
+  margin: 10rpx 20rpx;
+  box-shadow: 1px 1px 10rpx #1296db;
+}
+.book_title{
+  display: inline-block;
+  margin-top: 10rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.yes_no{
+  position: absolute;
+  top: -15rpx;
+  right: 40rpx;
+  width: 80rpx;
+  height: 90rpx;
+}
+/* 顶部菜单栏的样式 */
+.menu_scroll{
+  background: transparent;
+  margin-bottom: 30rpx;
+}
+
+.menu_wrapper{
+  display: flex;
+  /* 不换行处理 */
+  white-space: nowrap;
+}
+.menu_item{
+  flex: 0 0 auto;
+  display: inline-block;
+  font-size: 35rpx;
+  margin: 5rpx 10rpx;
+}
+.menu_item:first-child{
+  border-bottom: 1rpx solid #ddd;
+}
+/* 选书收藏夹 */
+.bottom{
+  overflow: hidden;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  bottom: 0rpx;
+}
+.selectcart_wrapper{
+  position: relative;
+  z-index: 100;
+  height: 120rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-top: 1rpx solid #ddd;
+}
+.selectcart_wrapper > image{
+  margin: 0rpx 20rpx;
+  margin-top: 5rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+/* 未选中状态 文字表现*/
+.selectcart_wrapper > .cart_text{
+  font-size: 35rpx;
+  color: #ddd;
+}
+.selectcart_wrapper > .cart_text > text{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #ddd;
+}
+/* 选中状态下的书籍列表 */
+#selected_content{
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  background: #fff;
+  width: 100%;
+  transition: all .2s;
+}
+/*选中状态下的书籍列表 头部内容*/
+#selected_content > .selected_head{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #1296db;
+}
+#selected_content > .selected_head > text{
+  position: absolute;
+  left: 10rpx;
+}
+#selected_content > .selected_head > .operation{
+  position: absolute;
+  right: 10rpx;
+  width: 200rpx;
+  justify-content: space-around;
+  display: flex;
+}
+#selected_content > .selected_head > .operation .clear{
+  color:#f40;
+}
+
+
+.book_list {
+  height: 500rpx;
+  overflow: scroll;
+}
+
+/* 当弹框弹出之后的蒙尘处理 */
+.cover{
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .2);
+}

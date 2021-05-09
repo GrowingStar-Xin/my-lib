@@ -1,0 +1,41 @@
+<view class="loginData">
+  <view class="header">书本信息录入页面</view>
+  <form action="#" class="loginform">
+    <view class="loginItem">
+      <label for="bookName" class="itemLable">书名:</label>
+      <input type="text" class="itemText" bindblur="_getBookName"/>
+    </view>
+    <view class="loginItem">
+      <label for="bookImg" class="itemLable">图片:</label>
+      <input type="text" class="itemText" bindblur="_getBookImg" placeholder="请输入照片地址"/>
+    </view>
+    <view class="loginItem">
+      <label for="article" class="itemLable">作者:</label>
+      <input type="text" class="itemText" bindblur="_getWriterName"/>
+    </view>
+    <view class="loginItem">
+      <label for="browse" class="itemLable">浏览:</label>
+      <input type="text" class="itemText" placeholder="目前已有的浏览次数" bindblur="_getBrowse" />
+    </view>
+    <view class="loginItem">
+      <label for="tag" class="itemLable">标签:</label>
+      <input type="text" class="itemText" bindblur="_getTag" placeholder="请输入书本归属类别"/>
+    </view>
+    <view class="loginItem">
+      <label for="time" class="itemLable">时间:</label>
+      <input type="text" class="itemText" placeholder="请输入书籍出版时间" bindblur="_getTime"/>
+    </view>
+    <view class="loginItem">
+      <label for="score" class="itemLable">书架:</label>
+      <input type="text" class="itemText" bindblur="_getLocation"/>
+    </view>
+
+    <view class="title">内容简介</view>
+    <textarea class="intro_info" placeholder="请输入内容简介..." bindblur="_getIntro" maxlength="-1">
+    </textarea>
+    <view class="title">作者简介</view>
+    <textarea class="intro_info" placeholder="请输入作者的简介..." bindblur="_getWriterIntro" maxlength="-1">
+  </textarea>
+  <button bindtap="sendData" class="sendBtn" hover-class="none">数据上传</button>
+  </form>
+</view>

@@ -1,0 +1,16 @@
+<view class="article-container">
+  <view class="operation">
+    <view class="btn"  bindtap="preChapter">上一章</view>
+    
+    <picker 
+      mode="selector" 
+      range="{{chapters}}" 
+      value="{{index}}" 
+      bindchange="chanpterChange"
+      class=" picker"
+      >{{chapters[index]}}</picker>
+      <view class="btn" bindtap="nextChapter">下一章</view>
+  </view>
+  <view class="title" >{{title}}</view>
+  <view class="content">{{content}}</view>
+</view>

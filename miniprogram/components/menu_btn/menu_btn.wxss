@@ -1,0 +1,148 @@
+@keyframes pop {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(180deg);
+  }
+}
+
+@keyframes takeback {
+  0% {
+    transform: rotateZ(180deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+/* 动态按钮样式 */
+.wrapper {
+  position: absolute;
+  right: 40rpx;
+  width: 120rpx;
+  bottom: 80rpx;
+  box-shadow: 1rpx 1rpx 10rpx #1296db,
+    1rpx 1rpx 20rpx #1296db;
+  border-radius: 60rpx;
+}
+/* 旋转按钮样式 */
+.menu_btn {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  background: transparent;
+  border-radius: 60rpx;
+  box-shadow: 1rpx 1rpx 10rpx #1296db;
+  /* animation: takeback 2s backwards; */
+}
+.bookImg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+}
+
+/* 功能按钮列表样式 */
+.menu_list {
+  height: 0;
+  overflow: hidden;
+  border-radius: 60rpx;
+  transition: all 1s;
+}
+.menu_list.active {
+  height: 360rpx;
+}
+
+.menu_item {
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 30rpx auto;
+  border-radius: 60rpx;
+  box-shadow: 1rpx 1rpx 10rpx #1296db;
+}
+.menu_item:nth-of-type(2) {
+  box-shadow: 1rpx 1rpx 10rpx #d81e06;
+}
+.menu_item:nth-of-type(3) {
+  box-shadow: 1rpx 1rpx 10rpx #13227a;
+}
+.itemImg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+}
+
+/* 书本列表的样式 */
+.selectedList {
+  position: absolute;
+  bottom: 130rpx;
+  right: 100rpx;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 0rpx;
+  height: 0rpx;
+  border-radius: 20rpx;
+  box-shadow: 1rpx 1rpx 10rpx #1296db;
+  transition: all 1s;
+}
+
+.selectedList.active {
+  position: absolute;
+  bottom: 130rpx;
+  right: 180rpx;
+  z-index: 2;
+  width: 75%;
+  height: 70%;
+  border-radius: 20rpx;
+}
+/* 每本书的样式 */
+.item_content{
+  position: relative;
+  width: 100%;
+  height: 280rpx;
+}
+.item_content:not(:last-child)::after{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  content: "";
+  height: 1rpx;
+  width: 80%;
+  background: #1296db;
+}
+.item{
+  display: flex;
+  padding:  20rpx;
+  width: 100%;
+  height: 280rpx;
+}
+
+.item > .item_img{
+  width: 200rpx;
+  height: 250rpx;
+}
+
+.item > .item_name{
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  font-size: 35rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cover{
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 80%;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "book_list":"../../components/book_list/book_list"
+  }
+}

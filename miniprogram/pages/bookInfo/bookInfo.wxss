@@ -1,0 +1,91 @@
+.bookName{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 120rpx;
+  padding-left: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+/* 推荐 和 加入图片的样式 */
+.book_menu{
+  position: relative;
+  width: 80%;
+  height: 80px;
+  display: flex;
+}
+.book_menu .readOnline {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+  font-size: 30rpx;
+  font-weight: bold;
+  
+}
+.book_menu > .menu_item{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  box-shadow: 1rpx 1rpx 10rpx #1296db;
+}
+/* .book_menu > .menu_item:nth-of-type(2){
+  box-shadow: 1rpx 1rpx 10rpx #1afa29;
+} */
+.iconImg{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+}
+
+.content{
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  display: flex;
+  width: 100%;
+  height: 400rpx;
+}
+.content > .info > view{
+  margin: 10rpx 0;
+}
+.content image{
+  width: 280rpx;
+  height: 370rpx;
+}
+
+.content .info{
+  margin-left: 20rpx;
+  height: 100%;
+}
+.title{
+
+  position: relative;
+  padding-left: 20rpx;
+  padding-bottom: 10rpx;
+  color: rgba(0, 0, 0, .3);
+  font-size:35rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 10rpx;
+  background: #abcdef;
+}
+
+.intro_info{
+  padding: 15rpx;
+  text-indent: 50rpx;
+  font-size: 35rpx;
+  color: rgba(0, 0, 0, .8);
+}

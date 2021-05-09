@@ -1,0 +1,96 @@
+/* 
+  头部样式；
+  包括借阅的书籍的信息
+ */
+.header{
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+ .title{
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.title::after{
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  content: "";
+  height: 5rpx;
+  width: 80%;
+  background: #1296db;
+}
+
+.bookList{
+  position: absolute;
+  overflow: scroll;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 100%;
+}
+/*
+  借阅信息的样式
+ */
+.container{
+  position: relative;
+  width: 100%;
+}
+.selected_form{
+  padding-top: 50rpx;
+  position: absolute;
+  top: 100rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height:400rpx;
+  border: 1rpx solid #f40;
+  /* box-shadow: 1rpx 1rpx 10rpx #ddd; */
+}
+.selected_form view{
+  position: relative;
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.selected_form view > label{
+  position: absolute;
+  left: 20rpx;
+  margin-left: 50rpx;
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 5rpx;
+  color: rgba(0, 0, 0, .3)
+}
+.selected_form view > text{
+  position: absolute;
+  right: 100rpx;
+  margin-left: 20rpx;
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: rgba(0, 0, 0, .3);
+  padding: 5rpx;
+}
+.selected_form view > picker{
+  position: absolute;
+  right: 100rpx;
+  margin-left: 20rpx;
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 5rpx;
+}
+.selected_form .submit {
+  margin-top: 30rpx;
+}
+
+
+

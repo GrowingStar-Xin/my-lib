@@ -1,0 +1,60 @@
+<!-- 头部部分 -->
+<!-- <navigator url="/pages/user/user-detail/user-detail" hover-class="none"> -->
+  <view id="user_head" bindtap="toUserDetail">
+    <image src="/images/user_img/mm.jpg" />
+    <view class="userName">
+      <text>{{user.name}}</text>
+      <image src="/images/user_img/ranchor.png" />
+    </view>
+  </view>
+<!-- </navigator> -->
+<!-- 底部部分 -->
+<view class="user_bottom">
+  <view class="history">
+    <!-- 历史浏览部分 -->
+    <navigator url="/pages/user/history-record/history-record" hover-class="none">
+      <view class="history_label">
+        <text>阅读记录</text>
+        <image src="/images/user_img/ranchor_grey.png" />
+      </view>
+    </navigator>
+    <scroll-view scroll-x class="history_scroll">
+      <view class="history_content">
+        <view class="history_item">
+          <image src="https://images-cn.ssl-images-amazon.cn/images/I/514805GEf7L._SY346_.jpg" />
+          <text>md谈成功</text>
+        </view>
+        <view class="history_item">
+          <image src="https://images-cn.ssl-images-amazon.cn/images/I/514805GEf7L._SY346_.jpg" />
+          <text>md谈成功</text>
+        </view>
+        <view class="history_item">
+          <image src="https://images-cn.ssl-images-amazon.cn/images/I/514805GEf7L._SY346_.jpg" />
+          <text>md谈成功</text>
+        </view>
+        <view class="history_item">
+          <image src="https://images-cn.ssl-images-amazon.cn/images/I/514805GEf7L._SY346_.jpg" />
+          <text>md谈成功</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <!-- 中间菜单部分 -->
+  <!-- navigator 与 tabBar 不能同时作用到同一个界面！！！ -->
+  <view class="content_menu">
+    <view class="menu_item" bindtap="toCollectPage">
+      <image src="/images/user_img/collect.png" />
+      <text>我的收藏</text>
+    </view>
+    <view class="menu_item" bindtap="toBorrowInfoPage">
+      <image src="/images/user_img/book.png" />
+      <text>借阅信息</text>
+    </view>
+    <view class="menu_item" bindtap="toMyReserve">
+      <image src="/images/user_img/clock.png" />
+      <text>我的预约</text>
+    </view>
+  </view>
+</view>

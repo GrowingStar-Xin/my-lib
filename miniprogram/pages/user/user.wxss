@@ -1,0 +1,131 @@
+/* 个人信息页面的样式 */
+
+/* 头部部分 */
+#user_head{
+  background: transparent;
+  display: flex;
+  align-items: center;
+  border-radius: 20rpx;
+  margin: 20rpx auto;
+  width: 90%;
+  height: 250rpx;
+  box-shadow: 1rpx 1rpx 10rpx #1296db,
+              1rpx 1rpx 1rpx #1296db;
+}
+
+#user_head image{
+  flex: 0 0 auto;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin: auto 30rpx;
+}
+#user_head .userName{
+  display: flex;
+  font-size: 40rpx;
+  font-weight: 700;
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+  margin: auto 30rpx;
+  justify-content: space-between;
+}
+#user_head .userName image{
+  height: 40rpx;
+  width: 40rpx;
+}
+/* 底部部分 */
+.user_bottom{
+  width: 90%;
+  margin: 0 auto;
+  padding: 20rpx 0rpx;
+  background: transparent;
+  border-radius: 15rpx;
+  box-shadow: 1rpx 1rpx 10rpx #1296db,
+  1rpx 1rpx 20rpx #1296db;
+}
+/* 历史浏览部分 */
+.history_label{
+  display: flex;
+  justify-content: space-between;
+}
+.history_label > text{
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgba(0, 0, 0, .4);
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+  
+}
+.history_label > image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.history_scroll{
+  height: 250rpx;
+  margin: 0rpx auto;
+  margin-bottom: 20rpx;
+  background: transparent;
+}
+.history_content{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.history_item{
+  flex:0 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 350rpx;
+  height: 100%;
+}
+.history_item > image{
+  flex: 0 0 auto;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  width: 260rpx;
+  height: 180rpx;
+}
+.history_item > text{
+  flex: 0 0 auto;
+  margin: 10rpx auto;
+  font-size: 35rpx;
+}
+/* 中间菜单样式 */
+.content_menu{
+  margin: 0rpx auto;
+  background: transparent;
+}
+.menu_item{
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  padding: 10rpx;
+  background: transparent;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.menu_item:not(:last-child)::after{
+  position: absolute;
+  bottom: 0;
+  background: #1296db;
+  content: "";
+  height: 1rpx;
+  width: 90%;
+  margin: 0 20rpx;
+}
+.menu_item image{
+  margin-left: 30rpx;
+  height: 75rpx;
+  width: 75rpx;
+  margin: auto 10rpx;
+}
+.menu_item text{
+  margin: auto 30rpx;
+  font-size: 35rpx;
+  font-weight: 550;
+  color: rgba(0, 0, 0, .5);
+}

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "book_list":"/components/book_list/book_list",
+    "search":"/components/search/search",
+    "menu_btn":"/components/menu_btn/menu_btn",
+    "login_data":"/components/login_data/login_data",
+    "subscribe":"/components/subscribe/subscribe",
+    "reserve":"/components/reserve/reserve"
+  }
+}

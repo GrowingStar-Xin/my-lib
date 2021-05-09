@@ -1,0 +1,13 @@
+<!-- 查阅信息页面 -->
+<view class="record_title">
+  <text>借阅记录</text>
+</view>
+<view class="record_list">
+  <block wx:for="{{recordArr}}" wx:key="id">
+    <view class="record_item">
+      <view class="record_time">开始时间：{{item.time}}</view>
+      <book_list collectArr="{{item.detail}}" edition="two" del_flag="false"/>
+      <image src="{{item.return ? '/images/return_yes.png':'/images/return_no.png'}}" class="return"/>
+    </view>
+  </block>
+</view>

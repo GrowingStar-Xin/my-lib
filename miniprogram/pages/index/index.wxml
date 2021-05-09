@@ -1,0 +1,41 @@
+<!-- 头部导航栏 -->
+<!-- 引入文件 -->
+<import src="/pages/template/template.wxml"></import>
+<scroll-view scroll-x>
+  <view class="nav_list">
+    <block wx:for="{{menu_list}}" wx:key="id">
+      <view class="nav_item" bindtap="show_content" id='{{index}}'>{{item.menu_item}}</view>
+    </block>
+  </view>
+</scroll-view>
+
+<swiper current="{{index}}" duration="1" class="content" >
+  <!-- 莞工图书0 -->
+  <swiper-item>  
+    <template is="mylib" data="{{swiper_img_list}}"></template>
+  </swiper-item>
+  <!-- 书籍搜索1 -->
+  <swiper-item class="content_item">
+    <!-- 绑定函数 search -->
+    <!-- 组件里头命名有大写的话 这里传入的值用-小写的形式 -->
+    <search bindgetResult="search" search-res="{{searchRes}}" />
+
+
+    <menu_btn selected_book="{{mStorage}}" selected_flag="{{mStorage_flag}}" bindcollectBook="collectBook"
+      bindsubscribe="borrowBook" bindremovebook="removeBook" />
+
+
+  </swiper-item>
+  <!-- 书籍借阅2 -->
+  <swiper-item class="content_item">
+    <subscribe selectedArr="{{last}}" bindborrowSubmit="borrowSubmit" user="{{user}}" />
+  </swiper-item>
+  <!-- 预约座位3 -->
+  <swiper-item class="content_item">
+    <reserve user="{{user}}" bindto-reserve="toReserve" />
+  </swiper-item>
+  <!-- 录入书籍4 -->
+  <swiper-item class="content_item">
+    <login_data bindaddData="addData" />
+  </swiper-item>
+</swiper>

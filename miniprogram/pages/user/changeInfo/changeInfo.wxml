@@ -1,0 +1,4 @@
+<view class="changeItem">
+  <input type="text" placeholder="请输入修改后的值" class="changeVal" bindblur="getVal"/>
+</view>
+<button type="primary" class="submit" bindtap="submit">提交</button>

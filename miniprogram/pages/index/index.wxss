@@ -1,0 +1,45 @@
+navigator{
+  outline: none;
+}
+.nav_list{
+  width: 100%;
+  display: flex;
+}
+.nav_item{
+  margin: 10rpx 10rpx;
+  flex:0 0 auto;
+  padding: 2rpx 10rpx;
+  text-align: center;
+  font-family: "UICTFontTextStyleBody";
+  color: #000;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.nav_item:hover{
+  box-shadow: 0rpx 1rpx 1rpx #1296db;
+}
+.index-swiper{
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  border-radius: 15rpx;
+}
+.index-swiper > swiper-item{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.index-swiper image{
+  width: 100%;
+}
+/* 中间存放不同卡片的区域 */
+.content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+  background-size: 100%;
+  background-repeat: space;
+  overflow:scroll;
+}
+

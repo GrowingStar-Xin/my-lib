@@ -1,0 +1,57 @@
+/* 个人详情页面的wxss样式 */
+
+/* 给详情页每一行的第一个文字添加左边距 */
+.user_detail_wrapper > view > text:first-child{
+  margin-left: 50rpx;
+}
+.info_item{
+  height: 120rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding:0 20rpx;
+  justify-content: space-between;
+}
+/* 
+  给非最后一列的元素添加下划线
+  元素与伪类选择器之间千万不要有空格！！！！
+*/
+.info_item:not(:last-child)::after{
+  position: absolute;
+  bottom: 0;
+  background: #ddd;
+  content: "";
+  height: 1rpx;
+  width: 90%;
+  margin-left:35rpx;
+}
+.user_detail_head{
+  height: 160rpx;
+}
+.info_content, .img_content{
+  display: flex;
+  align-items: center;
+  
+}
+
+.img_content image:nth-of-type(1){
+  width: 100rpx;
+  height: 100rpx;
+  margin-top:20rpx;
+  margin-right: 10rpx;
+}
+.img_content image:nth-of-type(2){
+  width: 60rpx;
+  height: 60rpx;
+  margin-top:20rpx;
+  margin-right: 10rpx;
+}
+.info_content > text{
+  color: rgba(0, 0, 0, .2);
+  margin-right: 20rpx;
+}
+.info_content > image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}

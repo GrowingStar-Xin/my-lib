@@ -1,0 +1,4 @@
+<!-- 收索框组件 -->
+<!-- 引入外部文件 -->
+<import src="/pages/template/template.wxml"/>
+<template is="search" data="{{searchRes, show_flag, res_num}}"/>

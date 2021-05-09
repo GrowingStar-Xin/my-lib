@@ -1,0 +1,25 @@
+<!-- 我的预约记录 -->
+<view class="title">我的预约记录</view>
+<block wx:for="{{record}}" wx:key="id">
+  
+  <view class="content">
+    <form action="#" class="reserve_form">
+      <view class="time">
+        <label for="date">日期:   </label>
+        <view>{{item.date}}</view>
+      </view>
+      <view class="item">
+        <label for="in">入馆时辰:</label>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="item">
+        <label for="name">名字：</label>
+        <text>{{item.name}}</text>
+      </view>
+      <view class="item">
+        <label for="name">学号/工号: </label>
+        <text>{{item.sno}}</text>
+      </view>
+    </form>
+  </view>
+</block>

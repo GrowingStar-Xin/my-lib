@@ -1,0 +1,38 @@
+/* 预约图书馆模块 */
+.title{
+  position: relative;
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+  font-weight: bold;
+  padding: 10rpx;
+}
+.title::after{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  background: rgba(0, 0, 0, .3);
+  height: 1rpx;
+  width: 30%;
+}
+
+.reserve_form{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20rpx;
+  width: 80%;
+  margin-top: 50rpx;
+  box-shadow: 1rpx 1rpx 10rpx #1296db,
+              1rpx 1rpx 20rpx #1296db;
+}
+.item{
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}

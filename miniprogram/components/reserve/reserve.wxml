@@ -1,0 +1,29 @@
+<!-- 预约图书馆模块 -->
+<view class="title">相约图书馆</view>
+<view class="content">
+  <form action="#" class="reserve_form">
+    <view class="item">
+      <label for="date">日期: </label>
+      <view>{{time}}</view>
+      <picker mode="selector" range="{{date}}" value="{{index}}" bindchange="_getDate" >
+        <view>{{date[index]}}</view>
+      </picker>
+    </view>
+    <view class="item">
+      <label for="in">入馆时辰</label>
+      <radio-group bindchange="_getInTime">
+        <radio checked value="morning">上午</radio>
+        <radio value="afternoon">下午</radio>
+      </radio-group>
+    </view>
+    <view class="item">
+      <label for="name">名字：</label>
+      <text>{{user.name}}</text>
+    </view>
+    <view class="item">
+      <label for="name">学号/工号: </label>
+      <text>{{user.sno}}</text>
+    </view>
+    <button type="primary" bindtap="_submit">提交</button>
+  </form>
+</view>
